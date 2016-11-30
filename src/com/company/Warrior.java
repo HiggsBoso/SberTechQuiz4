@@ -4,7 +4,7 @@ package com.company;
  * Created by Someone on 25.11.2016.
  */
 public abstract class Warrior implements Cloneable{
-    private int health;
+    protected int health;
     private int damage;
     private String squadName;
     private String warriorClassName;  // Возможно, не самая нужная информация, но удобно для вывода бойцов отряда

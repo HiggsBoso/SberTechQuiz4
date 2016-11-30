@@ -20,7 +20,7 @@ public class DateHelper {
     }
 
 
-    public String getFormattedDiff() {
+    public String getFormattedDiff() { //метод должен возвращать длительность поединка, а не время окончания
         return "Время окночания сражения:\nГод:  " + currentTime.getYear() + "\nМесяц: " + currentTime.getMonth()
                 + "\nДень: " + currentTime.getDayOfMonth() + "\nВремя: " + currentTime.getHour() + ":"
                 + currentTime.getMinute();

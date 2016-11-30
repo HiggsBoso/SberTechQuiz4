@@ -13,7 +13,7 @@ public class Battle {
         System.out.println(dateHelper.getFormattedStartDate());
 
         while (true) {
-            if (squad1.hasAliveWarriors() && squad2.hasAliveWarriors()) {
+            if (squad1.hasAliveWarriors() && squad2.hasAliveWarriors()) { //зачем тогда бесконечный цикл, если у него есть явное условие выполнения?
                 warrior1 = squad1.getRandomWarrior();
                 warrior2 = squad2.getRandomWarrior();
 
@@ -30,7 +30,7 @@ public class Battle {
                     warrior2.attack(warrior1);
                 }
                 i++;
-                System.out.println("i");
+                System.out.println("i"); //бесполезный вывод
             } else {
                 break;
             }
