@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class GameMenu {
     private static Warrior createWarriorOfChosenClass(int n) {
-        Warrior warrior = null;
+        Warrior warrior = null; //нужно исключить возможность возврата null. если сразу возвращать объект, не используя переменную, метод будет выглядеть лучше
         switch (n) {
             case 1:
                 warrior = new Archer();
@@ -49,7 +49,7 @@ public class GameMenu {
                 squad.addWarriorToSquad(createWarriorOfChosenClass(random.nextInt(3) + 1));
             }
             catch (java.lang.NullPointerException e) {
-                System.out.println("Here!");
+                System.out.println("Here!"); //что это за ошибка?
             }
         }
     }
@@ -59,12 +59,12 @@ public class GameMenu {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите имя отряда:");
-        if (scanner.hasNextLine()) {
+        if (scanner.hasNextLine()) { //эта проверка ничего не дает
             squadName = scanner.nextLine();
         }
         Squad squad = new Squad(squadName);
 
-        boolean flag = true;
+        boolean flag = true; //имя переменной ни о чем не говорит
         while (flag) {
             System.out.println("Выберите действие:\n" +
                     "1. Добавить бойца в отряд\n" +

@@ -41,20 +41,20 @@ public class Squad implements Cloneable{
     }
 
     Squad(String squadName) {
-        squad = new ArrayList<>();
+        squad = new ArrayList<>(); //зачем?
         setSquadName(squadName);
     }
 
     public void showSquad() {
         System.out.println(squadName);
-        for (int i = 0; i < squad.size(); i++) {
+        for (int i = 0; i < squad.size(); i++) { //здесь бы лучше смотрелся foreach
             System.out.println(squad.get(i) + "     " + squad.get(i).getHealth() + " " + squad.get(i).getDamage());
         }
     }
 
     @Override
     public String toString() {
-        return squadName;
+        return squadName; //в этот метод просится то, что сейчас находится в showSquad()
     }
 
     @Override
